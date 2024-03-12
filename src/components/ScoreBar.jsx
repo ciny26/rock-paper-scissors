@@ -1,8 +1,8 @@
-const ScoreBar = () => {
+const ScoreBar = ({scoreValue}) => {
     return ( 
         <>
         <h1>
-            Score : 0
+            Score : {scoreValue}
         </h1>
         
         </>
