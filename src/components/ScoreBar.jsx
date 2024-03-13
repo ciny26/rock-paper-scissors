@@ -1,7 +1,7 @@
 const ScoreBar = ({scoreValue}) => {
     return ( 
         <>
-        <h1>
+        <h1 className='centered-text'>
             Score : {scoreValue}
         </h1>
         

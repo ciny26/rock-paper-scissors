@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import ScoreBar from "../components/ScoreBar";
 import PlayingBtnContainer from "../components/PlayingBtnContainer";
 import Button from "../components/subComponents/Button.styled";
-import { useSelector } from "react-redux";
+import { useSelector , useDispatch } from "react-redux";
+import { setSelectedOption } from '../Store/Actions';
 import "../css_modules/Home.modules.css"
+
 
 const result = (playerChoice, computerChoice) => {
     if (playerChoice && computerChoice) {
@@ -26,11 +28,18 @@ const play = () => {
 const HomeView = () => {
     const [resultG, setResultG] = useState("");
     const [comOption, setComOption] = useState("");
+    const [showResult, setShowResult] = useState(false);
     const [score , setScore] = useState(0)
+    const [reseted , setReseted] = useState(false)
+
+
     const selectedOption = useSelector(status => status.Poption);
+    const dispatch = useDispatch()
 
     const compareResults = () => {
+        
         const computerOption = play();
+        setReseted(false)
         setComOption(computerOption);
         const resultValue = result(selectedOption, computerOption);
         setResultG(resultValue);
@@ -39,28 +48,47 @@ const HomeView = () => {
         } else if (resultValue === "Computer wins") {
             setScore(prevScore => prevScore - 1);
         }
-    }
+        //show the Result
+        setShowResult(true);
+        // Hide the result after 2 seconds
+        setTimeout(() => {
+            setShowResult(false);
+        }, 5000);
+    };
 
+    const resetGame = ()=>{
+        setScore(0)
+        setComOption("")
+        setShowResult(false);
+        setReseted(true)
+        dispatch(setSelectedOption("Player 1" , ""))
+    }
 
     return (
         <>
-            Home
-            <ScoreBar scoreValue = {score} />
+            <ScoreBar scoreValue = {score}  />
             <div className="playing-field">
-                <PlayingBtnContainer player="Player 1" className="playing-container" />
+                <PlayingBtnContainer player="Player 1" className="playing-container" reseted={reseted} />
                 <div className="play-button-holder">
                     {selectedOption ? (
                         <>
                             <Button onClick={compareResults}>Play</Button>
-                            <Button>Reset</Button>
+                            <Button onClick={resetGame}>Reset</Button>
                         </>
                     ) : ""}
                 </div>
                 <PlayingBtnContainer player="Computer" className="playing-container" comOption={comOption} />
             </div>
-            <div>{resultG}</div>
+            {
+                   showResult && <div className='result'>{resultG}</div>
+
+            }
         </>
     );
-}
+
+    }
+
+
+    
 
 export default HomeView;

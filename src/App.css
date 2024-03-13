@@ -1,3 +1,36 @@
 .highlited{
-    background-color: #d4f4dd;
+    background-color: #f2a054;
+}
+.chosed{
+    background-color: #8ef254;
+}
+
+.result {
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    animation: resultAnimation 1s ease-in-out;
+    /*transition: visibility 2s; /* Use visibility property for transition */   
+}
+
+.show-result{
+    
+}
+
+@keyframes resultAnimation {
+    0% {
+        visibility: hidden; /* Initially hide the element */
+        opacity: 0; /* Initially make it transparent */
+        transform: translateY(200%);
+    }
+    100% {
+        visibility: visible; /* Make the element visible */
+        opacity: 1; /* Fade it in */
+        transform: translateX(0);
+    }
+}
+
+.centered-text{
+    text-align: center;
 }

@@ -4,7 +4,7 @@ const PlayingBtn = styled.button`
   display : flex;
   justify-content: center;
   align-items: center;
-  border: ${props => props.$borderc} solid 1px;
+  border: ${props => props.$borderc} solid 4px;
   border-radius: 50%;
   width: 100px;
   height: 100px;
