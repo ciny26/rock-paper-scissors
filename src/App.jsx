@@ -13,8 +13,8 @@ function App() {
     <>
       <NavBar/>
       <Routes>
-        <Route path="/" Component={HomeView}></Route>
-        <Route path="/GameRules" Component={GameRulesView}></Route>
+        <Route path="/" element={<HomeView/>}></Route>
+        <Route path="/GameRules" element={<GameRulesView/>}></Route>
 
 
       </Routes>

@@ -3,6 +3,8 @@ html, body {
     margin: 0;
     min-height: 100%;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+
 }
 
 #root {
@@ -11,4 +13,5 @@ html, body {
     min-height: 100vh; /* Use min-height instead of height to ensure it takes full viewport height */
     background-color: rgb(3, 3, 36);
     color: rgb(202, 192, 192);
+
 }

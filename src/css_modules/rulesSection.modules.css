@@ -1,0 +1,50 @@
+.rule-container {
+    display: flex;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-80px);
+    opacity: 0; /* Initial opacity */
+    transition: opacity 0.5s, transform 2s; /* Transition for opacity and transform */
+}
+
+.middle {
+    height: 100%;
+    width: 1px;
+    border: white solid 1px;
+    background-color: white;
+    transition: background-color 1s, border 1s;
+}
+
+.right {
+    padding: 0 2rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transform: translateX(80px);
+    opacity: 0; /* Initial opacity */
+    transition: opacity 1s, transform 2s; /* Transition for opacity and transform */
+}
+
+.left-transmitted {
+    transform: translateX(0);
+    opacity: 1; /* Make visible */
+}
+
+.middle-highlighted {
+    border: gold solid 1px;
+    background-color: gold;
+}
+
+.right-transmitted {
+    transform: translateX(0);
+    opacity: 1; /* Make visible */
+}

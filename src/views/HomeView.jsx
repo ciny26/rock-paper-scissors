@@ -53,7 +53,7 @@ const HomeView = () => {
         // Hide the result after 2 seconds
         setTimeout(() => {
             setShowResult(false);
-        }, 5000);
+        }, 3000);
     };
 
     const resetGame = ()=>{
