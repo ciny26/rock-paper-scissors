@@ -8,7 +8,8 @@ nav{
 }
 
 a{  
-    box-sizing: margin;
+    justify-content: center;
+    width: 143px;
     height: 100%;
     display: inline-flex; 
     align-items: center;
@@ -16,7 +17,7 @@ a{
     font-weight: bold;
     font-size: 1.5rem;
     color: rgb(202, 192, 192);
-    margin: 0 1rem;
+    text-align: center;
     padding: 0 0.4rem;
 }
 a:hover{

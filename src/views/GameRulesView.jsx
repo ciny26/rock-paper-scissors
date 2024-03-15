@@ -7,7 +7,7 @@ const GameRulesView = () => {
     useEffect(() => {
         const handleScroll = () => {
             const sectionPositions = document.querySelectorAll('.rule-container');
-            const scrollPosition = window.scrollY + (window.innerHeight / 10);
+            const scrollPosition = window.scrollY + (window.innerHeight /-2);
 
             sectionPositions.forEach((section, index) => {
                 const { top, bottom } = section.getBoundingClientRect();
@@ -29,9 +29,10 @@ const GameRulesView = () => {
 
     return (
         <>
-            <RuleSection active={activeSection === 0} />
-            <RuleSection active={activeSection === 1} />
-            <RuleSection active={activeSection === 2} />
+            <RuleSection active={activeSection === 0} index={1} />
+            <RuleSection active={activeSection === 1} index={2} />
+            <RuleSection active={activeSection === 2} index={3} />
+            <RuleSection active={activeSection === 3} index={4} />
         </>
     );
 }

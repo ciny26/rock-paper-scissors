@@ -18,6 +18,11 @@ const Button = styled.button`
   &:hover {
     background-color: #1976D2; /* Darker blue on hover */
   }
+  @media (max-width: 870px) {
+    
+    margin: 20px;
+    padding : 10px;
+  }
 `;
 
 export default Button;

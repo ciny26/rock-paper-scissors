@@ -29,7 +29,7 @@ const PlayingBtnContainer = ({ player , comOption , reseted }) => {
 
     return (
         <div>
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div className='option-btns-wrapper'>
                 <PlayingBtn $borderc="red" value="Rock"     className={`${clicked === "Rock"  ? "highlited" : ""} ${comOption === "Rock" ? "chosed" : ""}`}
                      onClick={handleSetOption}>
                         <OptionImg src={handRock} alt="Rock" />

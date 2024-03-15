@@ -12,6 +12,17 @@ const PlayingBtn = styled.button`
   &:hover{
     cursor:pointer;
   }
+
+  @media (max-width: 870px) {
+    
+    margin: 20px 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    margin: 20px 0;
+  }
 `;
  
 export default PlayingBtn ;
