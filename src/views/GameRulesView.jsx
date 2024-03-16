@@ -5,6 +5,7 @@ const GameRulesView = () => {
     const [activeSection, setActiveSection] = useState(0);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         const handleScroll = () => {
             const sectionPositions = document.querySelectorAll('.rule-container');
             const scrollPosition = window.scrollY + (window.innerHeight /-2);

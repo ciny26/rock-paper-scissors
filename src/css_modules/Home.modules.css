@@ -54,8 +54,7 @@
 
 @media (max-width: 870px) {
 
-    .playing-field{
-    }
+    
     .playing-conatiner{
         flex-direction: column-reverse;
     }
@@ -68,6 +67,19 @@
 
     .result{
         display: block;
+       
+    }
+    
+}
+
+
+@media (max-height: 412px) {
+
+    .result{
+        display: block;
+       
+       font-size: 1.2rem;
+        margin-top: -0.5rem;
     }
     
 }
